@@ -19,6 +19,8 @@ type room struct {
 	clients map[*client] bool
 	// チャットルーム上で行われた操作のログを受け取る
 	tracer trace.Tracer
+	// アバターの情報を取得する
+	avatar Avatar
 }
 
 // newRoomはすぐに利用できるチャットルームを生成して返す
