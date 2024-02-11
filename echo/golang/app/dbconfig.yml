@@ -1,0 +1,8 @@
+development:
+  dialect: mysql
+  datasource: ${MYSQL_USER}:${MYSQL_PASSWORD}@tcp(db:3306)/${MYSQL_DATABASE}?parseTime=true
+  dir: ./migrations/
+# staging:
+#   dialect: mysql
+#   datasource: root:mysql@tcp(127.0.0.1)/sql_migrate_stg?parseTime=true
+#   dir: ./migrations/

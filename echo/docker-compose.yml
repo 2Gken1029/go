@@ -24,8 +24,8 @@ services:
     env_file:
       - ./mysql/.env
     volumes:
-      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
       - mysql_volume:/var/lib/mysql
+      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
     networks:
       - golang_echo_network
 

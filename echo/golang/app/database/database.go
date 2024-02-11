@@ -45,8 +45,6 @@ func dbInit() *gorm.DB {
 	return db
 }
 
-// ここから追加
-
 // レコード全件取得
 func ReadAll(db *gorm.DB) ([]User, error) {
 	// user構造体のスライスを作成

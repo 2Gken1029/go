@@ -10,8 +10,12 @@ RUN apk update && \
 WORKDIR /go/src/app
 # go.mod作成
 RUN go mod init app
+
+RUN go install github.com/rubenv/sql-migrate/...@latest
+
 # go.mod更新＆Air（ホットリロードライブラリ）インストール
 RUN go mod tidy && \
-  go install github.com/cosmtrek/air@v1.40.4
+  go install github.com/cosmtrek/air@v1.40.4 
+  
 # Air実行
 CMD ["air", "-c", ".air.toml"]
