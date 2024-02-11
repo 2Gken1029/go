@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     env_file:
-      - ./mysql/.env
+      - .env
     depends_on:
       - db
     volumes:
@@ -22,7 +22,7 @@ services:
     ports:
       - 3306:3306
     env_file:
-      - ./mysql/.env
+      - .env
     volumes:
       - mysql_volume:/var/lib/mysql
       - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
